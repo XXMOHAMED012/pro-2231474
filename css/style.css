@@ -1,0 +1,320 @@
+/* Start Global Rules  */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #eccfcb;
+    --main-color-alt: #ffefed;
+    --main-transition: 0.3s;
+    --main-padding-top: 60px;
+    --main-padding-bottom: 60px;
+    --section-background: #ececec;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Cairo" , sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.main-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--main-color);
+}
+
+.main-title p{
+    font-size: 18px;
+    color: #777;
+    padding: 0 10px;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+.header{
+    box-shadow: 0px 0px 20px #3333335e;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .container .logo {
+    max-height: 64px;
+}
+
+.header .container .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .container .links li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+    position: relative;
+    color: black;
+    padding: 0 30px;
+    transition: var(--main-transition);
+    overflow: hidden;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.header .container .links li a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    left:-100%; 
+    transition: var(--main-transition);
+}
+
+.header .container .links li a:hover::before{
+    left: 0;
+}
+
+.header .container .links li a:hover{
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+
+/* End Header */
+
+/* Start Landing */
+
+.landing{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.landing .container{
+    display: flex;
+    gap: 10px;
+}
+
+.landing .container .school{
+    flex-basis: 20%;
+    background-color: var(--main-color);
+}
+
+.landing .container .school h3{
+    margin: 10px 0;
+}
+
+.landing .container .school .images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.landing .container .school .images img{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100px;
+}
+
+.landing .container .photo{
+    flex-basis: 30%;
+    border: 5px solid var(--main-color);
+}
+
+.landing .container .photo img{
+    width: 100%;
+    height: 340px;
+    background-color: var(--main-color);
+}
+
+.landing .container .photo .text{
+    text-align: center;
+}
+
+.landing .container .photo .text h3{
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.landing .container .photo .text p{
+
+}
+
+.landing .container .info{
+    flex-basis: 50%;
+    border: 5px solid var(--main-color);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.landing .container .info p{
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.landing .container .info p > a{
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--main-color);
+    transition: var(--main-transition);
+}
+
+.landing .container .info p > a:hover{
+    color: black;
+}
+
+.landing .container .info h3{
+
+}
+
+.landing .container .info > a{
+    display: block;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--main-color);
+    padding: 8px 30px;
+    margin: 0 auto;
+    transition: var(--main-transition);
+}
+
+.landing .container .info > a:hover{
+    background-color: var(--main-color-alt);
+}
+
+/* End Landing */
+
+/* Start EXPERTISE */
+
+.exp{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.exp .container{
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax( 250px , 1fr ) );
+    gap: 15px;
+    row-gap: 40px;
+}
+
+.exp .container .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: var(--main-transition);
+}
+
+.exp .container .box:hover{
+    transform:translateY(-10px) ;
+}
+
+.exp .container .box img{
+    width: 74px;
+}
+
+.exp .container .box h3{
+    transition: var(--main-transition);
+}
+.exp .container .box:hover h3{
+    color: var(--main-color);
+}
+
+/* End EXPERTISE */
+
+/* Start EXPERIENCE */
+
+.exper{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.exper .container{
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax( 250px , 1fr ) );
+    gap: 15px;
+    row-gap: 40px;
+}
+
+.exper .container .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: var(--main-transition);
+}
+
+.exper .container .box:hover{
+    transform:translateY(-10px) ;
+}
+
+.exper .container .box img{
+    width: 74px;
+}
+
+/* End EXPERIENCE */
